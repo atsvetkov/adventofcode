@@ -1,8 +1,6 @@
 TARGET = 2020
 
 numbers = [int(line) for line in open('input.txt')]
-
-# sort first, to allow quicker 2-sum algorithm
 numbers.sort()
 
 for i in range(len(numbers)-2):
