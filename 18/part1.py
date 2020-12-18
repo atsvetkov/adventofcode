@@ -3,6 +3,7 @@ operators = {
     '*': lambda x, y: x * y
 }
 
+
 def calculate(acc, operator, expr):
     while expr:
         token = expr.pop()
@@ -18,8 +19,5 @@ def calculate(acc, operator, expr):
     return acc
 
 
-for line in open('input.txt'):
-    result = calculate(0, '+', [c for c in reversed(line.strip()) if c != ' '])
-    print(f'{line.strip()} ---> {result}')
-
-print(sum([calculate(0, '+', [c for c in reversed(line.strip()) if c != ' ']) for line in open('input.txt')]))
+print(sum([calculate(0, '+', [c for c in reversed(line.strip()) if c != ' '])
+           for line in open('input.txt')]))
